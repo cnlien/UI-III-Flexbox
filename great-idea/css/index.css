@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -60,7 +60,191 @@ html, body {
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Your code starts here! */
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+
+nav {
+	position: fixed;
+	overflow: hidden;
+	min-height: 80px;
+	width: 100%;
+	padding: 0 30px;
+	font-size: .9em;
+	margin: 0 auto;
+	background: #bababa;
+}
+
+nav a {
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	padding: 0 25px;
+	color:white;
+	text-decoration: none;
+	transition: background-color .3s ease;
+}
+
+	nav a:hover {
+		background-color:	black;
+	}
+
+	nav .logo{
+		display: inline-block;
+		height: 80px;
+		width: 183px;
+		float: right;
+		background-image: url("../img/logo.png");
+		background-repeat: no-repeat;
+		background-color:#bababa;
+		vertical-align: bottom;
+		background-position: center;
+	}
+
+	nav .logo:hover{
+		background-color: #bababa;
+	}
+
+		@media (max-width:900px) {
+			nav .logo{
+				display: none;
+			}
+		}
+
+	h1{
+		font-size: 4.75em;
+		margin-bottom: .25em;
+		text-align: center;
+	}
+
+	h2{
+		font-size: 1em;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+	p{
+		font-family: 'Barriecito', cursive;
+		/*boy is this font ugly but it looks different so ¯\_(ツ)_/¯*/
+	}
+	a {
+		text-decoration: none;
+	}
+
+header {
+	min-height: 500px;
+	max-width: 1024px;
+	min-width: 950px;
+	border-bottom: 1px solid black;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+	.headerLeft {
+		margin: 0;
+		display: inline-block;
+		width:49%;
+		height:500px;
+	}
+
+	#headerIntro{
+		display: block;
+		margin-top: 28%;
+	}
+
+		button{
+			display: block;
+			width: 180px;
+			height: 35px;
+			margin: 0 auto;
+			background-color: white;
+			border: 1px solid black;
+			font-size: 1em;
+			font-family: 'Titillium Web', sans-serif;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover{
+			cursor: pointer;
+			background-color: #bababa;
+			border: 1px solid #bababa;
+		}
+
+		button:active{
+			background-color: #1c1c1c;
+			color: white;
+		}
+
+	.headerRight {
+		width:50%;
+		display: inline-block;
+		background: url(../img/header-img.png) center no-repeat;
+		background-size: 80%;
+		vertical-align: bottom;
+		height:500px;
+
+	}
+	.headerImage{
+		display: inline-block;
+		background: green;
+	}
+
+	.contentTop {
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 35px 5px;
+	}
+
+	.contentBottom {
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 35px 5px;
+	}
+
+	.twoCol{
+		display: inline-block;
+		max-width:49%;
+		padding: 5px;
+	}
+	.threeCol{
+		display: inline-block;
+		max-width:32%;
+		padding: 5px;
+	}
+	.contact{
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 35px 10px;
+		border-top:1px solid black;
+	}
+
+	address{
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+
+	.contact p{
+		margin-bottom: 10px;
+	}
+		.contact a{
+			color: black;
+		}
+		.contact a:hover{
+			text-decoration: underline;
+		}
+
+	.middle-img{
+		width: 100%;
+		max-width: 1024px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	footer{
+		margin:35px 0 100px 0;
+		text-align: center;
+	}
+
+	.clear{
+		clear: both;
+	}
